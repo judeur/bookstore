@@ -1,14 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bookstore</title>
+  <title>Your Favorite Bookstore</title>
+  
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+   
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300|Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
+  
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"> </script>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <%= csrf_meta_tags %>
+  
+  
 </head>
+
 <body>
+	<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand">Your Favorite Bookstore</a>
+				</div> <!-- navbar-header -->
+				
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="../static_pages/index.html">Home</a></li>
+            <li><a href="../products#index"> Books </a></li>
+            <li><a href="../static_pages/about.html">About us </a></li>
+            <li><a href="../static_pages/contact.html">Contact</a></li>
 
-<%= yield %>
-
+<!--             <li><%= link_to "Contact", 'contact.html' %></li> -->
+            
+					</ul>
+				</div> <!-- #navbar -->
+			</div> <!-- container -->
+	</div> <!-- navbar -->
+	<div class="container main">
+		
+		
+		<%= yield %>
+	
+	</div> <!-- container -->
+<!-- 	<footer class="footer"> -->
+		<div class="container">
+			<div class="navbar navbar-fixed-bottom custom-footer">
+				<div class="col-md-12">
+					<p> &copy; Judith Deurvorst 2015 </p>
+				</div> <!-- col -->
+			</div> <!-- navbar-fixed-bottom -->
+		</div> <!-- container -->
+<!-- 	</footer> -->
 </body>
 </html>
+
+
