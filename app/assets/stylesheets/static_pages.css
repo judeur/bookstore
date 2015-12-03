@@ -86,6 +86,10 @@ p {
   font-size: 18px;
   line-height: 20px; }
 
+.navbar-default .navbar-nav > li > a {
+  color: #f3f1f0;
+  font-size: 1.2em; }
+
 /* ---------------------- Navbar Toggle--------------- */
 .navbar-toggle {
   background-color: #045449; }
