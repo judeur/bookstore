@@ -27,10 +27,11 @@ p {
 
 .container {
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+  margin-top: 200px; }
 
 /* ---------------------- Main Navigation --------------- */
-.navbar .container-fluid {
+.navbar {
   padding: 30px 0;
   height: 95px;
   background-color: #9b9393; }
@@ -60,11 +61,19 @@ p {
 
 @media only screen and (max-width: 768px) {
   .page-header {
-    margin: 120px 0 20px; } }
+    margin: 120px 0 20px; }
+  .collapsing, .in {
+    background-color: rgba(247, 247, 247, 0.7); }
+  .collapsing ul li a, .in ul li a {
+    color: #555 !important; }
+  .collapsing ul li a:hover, .in ul li a:hover {
+    color: #f1f1f1 !important; } }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
     margin-left: 20px; }
+  .container .main {
+    margin-top: 400px; }
   .navbar-nav > li > a {
     padding-top: 0;
     padding-bottom: 2px; } }
@@ -92,7 +101,8 @@ p {
 
 /* ---------------------- Navbar Toggle--------------- */
 .navbar-toggle {
-  background-color: #045449; }
+  background-color: #045449;
+  color: #777; }
 
 .navbar-default .navbar-toggle .icon-bar {
   background-color: white; }
