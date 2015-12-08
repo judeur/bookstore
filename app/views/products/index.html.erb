@@ -1,7 +1,7 @@
 <div class="container-fluid index">
 <p id="notice"><%== notice %></p>
 <h2> Our books </h2>
-
+<%= link_to 'Add a new book', new_product_path %>
 
 	
 	
@@ -37,15 +37,18 @@
 								
 							</div> <!-- col -->
 						</div> <!-- row -->
+						
 				</div> <!-- caption -->
 			</div> <!-- thumbnail -->	
 		</div> <!-- item -->
 		<% end %>
+		
+
 	</div> <!-- #products .row -->
+	
 </div> <!-- container -->
 	
 <br>
 	
-<%= link_to 'New Product', new_product_path %>
 	
 	
