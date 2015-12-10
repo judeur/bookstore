@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'tasks/show'
+
+  get 'tasks/new'
+
+  get 'tasks/edit'
+
   resources :products
   get 'static_pages/about'
 
