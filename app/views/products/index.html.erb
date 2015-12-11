@@ -10,12 +10,12 @@
 		<div class="item col-xs-12 col-sm-6 col-lg-4">
 			<div class="thumbnail">
 				
-				<p class="img group list-group-image"><%= product.image_url %></p>
+				<p class="img group list-group-image"><%= image_tag product.image_url %></p>
 				
 				<div class="caption">
-					<h3 class="group inner list-group-item-heading strong"> Name </h3>
+					<h3 class="group inner list-group-item-heading strong"> <%= product.name %></h3>
 					
-					<p><%= product.name %> </p>
+					
 					
 					
 					<p class="group inner list-group-item-text"> 

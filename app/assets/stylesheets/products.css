@@ -35,6 +35,9 @@ a {
 p.img {
   height: 160px; }
 
+.item.list-group-item .thumbnail .img {
+  height: 160px; }
+
 .item.list-group-item .thumbnail {
   margin-bottom: 0px; }
 
