@@ -24,7 +24,8 @@ h4 {
   margin-bottom: 20px; }
 
 p {
-  color: #777; }
+  color: #777;
+  font-family: "Roboto Slab", sans-serif; }
 
 .container {
   margin-right: auto;
@@ -107,6 +108,35 @@ p {
 
 .navbar-default .navbar-toggle .icon-bar {
   background-color: white; }
+
+/* -----------------Carousel ----------------------- */
+.carousel-caption {
+  text-shadow: none;
+  margin-left: 50px; }
+
+.carousel-caption p {
+  font-size: 0.7em; }
+
+.carousel-control.right,
+.carousel-control.left {
+  background-image: none;
+  background-color: transparent; }
+
+.carousel-inner > .item > a > img, .carousel-inner > .item > img, .img-responsive, .thumbnail a > img, .thumbnail > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: 70px; }
+
+.carousel-indicators li {
+  background-color: #999;
+  background-color: rgba(70, 70, 70, 0.25); }
+
+.carousel-indicators .active {
+  background-color: #444; }
+
+.carousel-indicators {
+  bottom: -15px; }
 
 /* --------------------- Footer ------------------ */
 .navbar-fixed-bottom {

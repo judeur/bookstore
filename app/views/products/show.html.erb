@@ -10,14 +10,14 @@
 				<tr>
 					<th>Name</th>
 					<th>Description</th>
-					<th>Image url</th>
+					<th>Image</th>
 					<th>Price </th>
 				</tr> <!-- col -->
 			</thead> <!-- row -->
 			<tbody>
 				<td><%= @product.name %></td>
 				<td><%= @product.description %></td>
-				<td><%= @product.image_url %></td>
+				<td><%= image_tag @product.image_url %></td>
 				<td><%= @product.price %></td>
 			</tbody>
 		</table>
