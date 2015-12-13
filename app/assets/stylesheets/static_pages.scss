@@ -40,7 +40,11 @@ p {color: #777;
   margin-left: auto;
   margin-top: 200px; }
 
- 
+/* ---------------------Contact page -------------------*/
+.contact p {
+	font-size: 1em;
+	line-height: 2em;
+}
 /* ---------------------- Main Navigation --------------- */
 .navbar{
   padding: 30px 0;
@@ -156,7 +160,7 @@ and (max-width: 768px) {
 }
 
 .carousel .carousel-caption {
-	top: 90%;
+	top: 100%;
 	transform: translateY(-90%);
 	bottom: initial;
 }
@@ -191,6 +195,15 @@ and (max-width: 768px) {
 
 .carousel-indicators {
 	bottom: -15px;
+}
+
+.glyphicon-chevron-right:before {
+    content: "\e080";
+    color: #504d4d;
+}
+.glyphicon-chevron-left:before {
+	content: "\e079";
+    color: #504d4d;
 }
 /* --------------------- Footer ------------------ */
 .navbar-fixed-bottom {
