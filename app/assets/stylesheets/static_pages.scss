@@ -138,13 +138,34 @@ and (max-width: 768px) {
 }
 
 /* -----------------Carousel ----------------------- */
+
 .carousel-caption {
 	text-shadow: none;
-	margin-left: 50px;
+	margin-left: 60px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel {
+	margin-top: -30px;
+}
+
+.carousel .carousel-caption {
+	top: 90%;
+	transform: translateY(-90%);
+	bottom: initial;
 }
 
 .carousel-caption p {
 	font-size: 0.7em;
+}
+.carousel-caption h5 {
+	color: #504d4d;
 }
  .carousel-control.right,
  .carousel-control.left {
@@ -156,6 +177,7 @@ and (max-width: 768px) {
     max-width: 100%;
     height: auto;
     margin-left: 70px;
+    margin-top: 30px;
 }
 
 .carousel-indicators li {

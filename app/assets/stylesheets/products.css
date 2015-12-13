@@ -60,11 +60,5 @@ p.img {
 .list-group-item-text {
   margin: 0 0 11px; }
 
-.carousel {
-  position: relative;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto; }
-
 .index #products {
   margin-top: 50px; }
