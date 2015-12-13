@@ -9,6 +9,7 @@
 			<thead>
 				<tr>
 					<th>Name</th>
+					<th>Author</th>
 					<th>Description</th>
 					<th>Image</th>
 					<th>Price </th>
@@ -16,6 +17,7 @@
 			</thead> <!-- row -->
 			<tbody>
 				<td><%= @product.name %></td>
+				<td><%= @product.author %>
 				<td><%= @product.description %></td>
 				<td><%= image_tag @product.image_url %></td>
 				<td><%= @product.price %></td>
