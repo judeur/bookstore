@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   root 'static_pages#landing_page'
   get 'about' =>'static_pages#about'
   get 'contact' => 'static_pages#contact'
