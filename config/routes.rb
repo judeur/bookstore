@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   get 'tasks/edit'
 
   resources :products
-  get 'static_pages/about'
+  get 'about' =>'static_pages#about'
 
-  get 'static_pages/contact'
+  get 'contact' => 'static_pages#contact'
 
 #   get 'static_pages/index'
   
