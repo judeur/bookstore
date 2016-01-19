@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  root 'static_pages#landing_page'
+  get 'about' =>'static_pages#about'
+  get 'contact' => 'static_pages#contact'
+  get 'signup' => 'users#new'
+  get 'products/index'
+
   get 'tasks/show'
 
   get 'tasks/new'
@@ -6,21 +12,14 @@ Rails.application.routes.draw do
   get 'tasks/edit'
 
   resources :products
-  get 'about' =>'static_pages#about'
 
-  get 'contact' => 'static_pages#contact'
-
-#   get 'static_pages/index'
-  
-  get 'products/index'
-  
   resources :orders, only: [:index, :show, :create, :destroy]
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'static_pages#landing_page'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,24 +1,33 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<%= link_to "Your favorite bookstore", root_path, class: "navbar-brand" %>
-					
-				</div> <!-- navbar-header -->
-				
-				<div  class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to "Your favorite bookstore", root_path, class: "navbar-brand" %>
 
-            <li class='active'><%= link_to "Books", products_path %> </li>
-            <li><%= link_to "Orders", orders_path %> </li>
-            <li><%= link_to "About us", about_path %></li>
-            <li><%= link_to "Contact", contact_path %></li>
-					</ul>
-				</div> <!-- #navbar -->
-			</div> <!-- container -->
+    </div> <!-- navbar-header -->
+
+    <div  class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class='active'><%= link_to "Books", products_path %> </li>
+        <li><%= link_to "Orders", orders_path %> </li>
+        <li><%= link_to "About us", about_path %></li>
+        <li><%= link_to "Contact", contact_path %></li>
+        <li><%= link_to "Sign up now!", signup_path, class: "btn btn-primary" %> </li>
+        <li style="padding-top: 22px;">
+          <%= form_tag("/products", method: "get", html: { class: "navbar-form navbar-right" }) do %>
+              <%= text_field_tag(:q) %>
+              <%= submit_tag("Search", html: { class: "btn btn-default" }) %>
+          <% end %></li>
+      </ul>
+
+
+
+    </div> <!-- #navbar -->
+  </div> <!-- container -->
 	</nav> <!-- navbar -->

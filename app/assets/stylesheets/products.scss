@@ -88,3 +88,11 @@ p.img {
 .index #products {
 	margin-top: 50px;
 }
+
+@media (min-width: 768px) {
+  .form-horizontal .control-label {
+    padding-top: 25px;
+    margin-bottom: 0;
+    text-align: right;
+  }
+}
