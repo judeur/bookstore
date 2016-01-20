@@ -18,4 +18,31 @@
 	  <br>
 	  <br>
 	</p>
-</div>
+
+  <h3>Or you can fill out this form:</h3>
+
+  <%= flash[:notice] %>
+
+  <%= form_tag("/static_pages/thank_you") do %>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= label_tag :name, "Name" %>
+        <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter name" %>
+      </div><!-- form-group -->
+
+      <div class="form-group">
+        <%= label_tag :email, "Email" %>
+        <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter email" %>
+      </div><!-- form-group -->
+
+      <div class="form-group">
+        <%= label_tag :name, "Name" %>
+        <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter message" %>
+      </div><!-- form-group -->
+
+    </div> <!-- col -->
+  </div> <!-- row -->
+  <%= submit_tag "Send" %>
+  <% end %>
+</div><!-- contact -->
