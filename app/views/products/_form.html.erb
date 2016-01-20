@@ -11,56 +11,57 @@
           </ul>
         </div>
     <% end %>
+    <div class="row">
+      <div class="form-group">
+        <div class="field">
+          <%= f.label :name, class: "col-md-4  control-label" %><br>
+          <div class="col-md-8">
+            <%= f.text_field :name %>
+          </div>  <!-- col -->
+        </div><!-- field -->
+      </div><!-- form-group -->
 
-    <div class="form-group">
-      <div class="field">
-        <%= f.label :name, class: "col-md-4  control-label" %><br>
-        <div class="col-md-8">
-          <%= f.text_field :name %>
-        </div>  <!-- col -->
-      </div><!-- field -->
-    </div><!-- form-group -->
+      <div class="form-group">
+        <div class="field">
+          <%= f.label :author, class: "col-md-4 control-label" %><br>
+          <div class="col-md-8">
+            <%= f.text_field :author %>
+          </div>  <!-- col -->
+        </div><!-- field -->
+      </div><!-- form-group -->
 
-    <div class="form-group">
-      <div class="field">
-        <%= f.label :author, class: "col-md-4 control-label" %><br>
-        <div class="col-md-8">
-          <%= f.text_field :author %>
-        </div>  <!-- col -->
-      </div><!-- field -->
-    </div><!-- form-group -->
+      <div class="form-group">
+        <div class="field">
+          <%= f.label :description, class: "col-md-4 control-label" %><br>
+          <div class="col-md-8">
+            <%= f.text_area :description %>
+          </div>  <!-- col -->
+        </div><!-- field -->
+      </div><!-- form-group -->
 
-    <div class="form-group">
-      <div class="field">
-        <%= f.label :description, class: "col-md-4 control-label" %><br>
-        <div class="col-md-8">
-          <%= f.text_area :description %>
-        </div>  <!-- col -->
-      </div><!-- field -->
-    </div><!-- form-group -->
-
-    <div class="form-group">
-      <div class="field">
-        <%= f.label :image_url, class: "col-md-4 control-label" %><br>
-        <div class="col-md-8">
-          <%= f.text_field :image_url %>
-        </div>  <!-- col -->
-      </div> <!-- field -->
-    </div><!-- form-group -->
+      <div class="form-group">
+        <div class="field">
+          <%= f.label :image_url, class: "col-md-4 control-label" %><br>
+          <div class="col-md-8">
+            <%= f.text_field :image_url %>
+          </div>  <!-- col -->
+        </div> <!-- field -->
+      </div><!-- form-group -->
 
 
-    <div class="form-group">
-      <div class="field">
-        <%= f.label :price, class: "col-md-4 control-label" %><br>
-        <div class="col-md-8">
-          <%= f.text_field :price %>
-        </div>  <!-- col -->
-      </div><!-- field -->
-    </div><!-- form-group -->
+      <div class="form-group">
+        <div class="field">
+          <%= f.label :price, class: "col-md-4 control-label" %><br>
+          <div class="col-md-8">
+            <%= f.text_field :price %>
+          </div>  <!-- col -->
+        </div><!-- field -->
+      </div><!-- form-group -->
 
-    <div class="form-group">
-      <div class=" field actions col-md-offset-4 col-md-8">
-        <%= f.submit "Submit", class: "btn btn-default btn-primary" %>
-      </div><!-- field -->
-    </div> <!-- form-group -->
+      <div class="form-group">
+        <div class=" field actions col-md-offset-4 col-md-8">
+          <%= f.submit "Submit", class: "btn btn-default btn-primary" %>
+        </div><!-- field -->
+      </div> <!-- form-group -->
+    </div> <!-- row -->
 <% end %>
