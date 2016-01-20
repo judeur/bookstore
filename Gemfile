@@ -47,8 +47,9 @@ group :development, :test do
   gem 'byebug'
   
 group :production do
-	gem 'rails_12factor'
-	gem 'pg'
+	gem 'rails_12factor', '0.0.2'
+	gem 'pg',             '0.17.1'
+  gem 'puma',           '2.11.1'
 end
 
   # Access an IRB console on exception pages or by using <%= console %> in views
