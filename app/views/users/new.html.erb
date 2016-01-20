@@ -1,22 +1,51 @@
 <h1>Sign up</h1>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
-        <%= render 'shared/error_messages' %>
+    <%= form_for(@user, :html => { :class => "form-horizontal center" }) do |f| %>
+      <%= render 'shared/error_messages' %>
 
-        <%= f.label :name %>
-        <%= f.text_field :name %>
+      <div class="form-group">
+        <div class="field">
+          <%= f.label :name, class: "col-md-4  control-label" %><br>
+          <div class="col-md-8">
+            <%= f.text_field :name %>
+          </div> <!-- col -->
+        </div> <!-- field -->
+      </div> <!-- form-group -->
 
-        <%= f.label :email %>
-        <%= f.email_field :email %>
+      <div class="form-group">
+        <div class="field">
+          <%= f.label :email, class: "col-md-4  control-label" %><br>
+          <div class="col-md-8">
+            <%= f.email_field :email %>
+          </div> <!-- col -->
+        </div> <!-- field -->
+      </div> <!-- form-group -->
 
-        <%= f.label :password %>
-        <%= f.password_field :password %>
+      <div class="form-group">
+        <div class="field">
+          <%= f.label :password, class: "col-md-4  control-label" %><br>
+          <div class="col-md-8">
+            <%= f.password_field :password %>
+          </div> <!-- col -->
+        </div> <!-- field -->
+      </div> <!-- form-group -->
 
-        <%= f.label :password_confirmation, "Confirmation" %>
-        <%= f.password_field :password_confirmation %>
+      <div class="form-group">
+        <div class="field">
+          <%= f.label :password_confirmation, "Confirmation",
+                      class: "col-md-4  control-label" %><br>
+          <div class="col-md-8">
+            <%= f.password_field :password_confirmation %>
+          </div> <!-- col -->
+        </div> <!-- field -->
+      </div> <!-- form-group -->
 
-        <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <div class="form-group">
+        <div class="field actions col-md-offset-4 col-md-8">
+          <%= f.submit "Create my account", class: "btn btn-primary" %>
+        </div> <!-- field -->
+      </div> <!-- form-group -->
     <% end %>
   </div>
 </div>
