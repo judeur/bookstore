@@ -1,25 +1,21 @@
 Rails.application.routes.draw do
-  get 'users/new'
-
-  root 'static_pages#landing_page'
-  get 'about' =>'static_pages#about'
-  get 'contact' => 'static_pages#contact'
-  get 'signup' => 'users#new'
-
+  root              'static_pages#landing_page'
+  get 'about'     =>'static_pages#about'
+  get 'contact'   => 'static_pages#contact'
+  get 'signup'    => 'users#new'
   post 'static_pages/thank_you'
-
+  # get 'users/new'
   get 'products/index'
-
   get 'tasks/show'
-
   get 'tasks/new'
-
   get 'tasks/edit'
+  get 'login'     => 'sessions#new'
+  post 'login'    => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+
 
   resources :products
-
   resources :orders, only: [:index, :show, :create, :destroy]
-
   resources :users
 
 
