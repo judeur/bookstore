@@ -1,0 +1,308 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$fmain: 13px Arial, Helvetica, sans-serif;
+$cmain: #9b9393;
+$ccontrast: #e28b64;
+/*------------------ Main content -------------*/
+body {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 300;
+  font-size: 2em;
+  position: relative;
+  margin-top: 100px;
+  height: 100vh;
+}
+
+.main {
+  min-height: 100%;
+  margin: 140px auto -50px;
+  height: auto !important;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  margin: 0;
+  color: #777;
+  margin-bottom: 20px;
+}
+p {color: #777;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 200px; }
+
+/* ---------------------Contact page -------------------*/
+.contact p {
+  font-size: 1em;
+  line-height: 2em;
+}
+/* ---------------------- Main Navigation --------------- */
+.navbar{
+  padding: 30px 0;
+  height: 95px;
+  background-color: #9b9393;
+}
+
+.nav>li {
+  padding-right: 25px;
+}
+.navbar-default .navbar-nav .active a {
+  background: transparent;
+  border-bottom: 3px solid #ec8b64;
+  text-shadow: none;
+  color: #f3f1f0;}
+
+.navbar-default .navbar-nav>li>a {
+  color: #f3f1f0;
+}
+
+.navbar-default .navbar-nav .active a:hover {
+  background: transparent;
+  font-weight: 500; }
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+  color: #ec8b64;
+  background-color: transparent; }
+
+.navbar-default .navbar-brand {
+  color: #f3f1f0;
+}
+
+@media only screen
+and (max-width: 1085px) and (min-width: 768px) {
+  .page-header {
+    margin: 120px 0 20px;
+  }
+  .collapsing, .in {
+    background-color: rgba(247, 247, 247, 0.7);
+  }
+  .collapsing ul li a, .in ul li a {
+    color: #555!important;
+  }
+  .collapsing ul li a:hover, .in ul li a:hover {
+    color: #ec8b64!important;
+  }
+}
+
+
+
+@media all and (max-width: 1085px) and (min-width: 768px) {
+  .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-left: 20px;
+  }
+  .container .main {
+    margin-top: 400px;
+  }
+  .navbar-nav>li>a {
+    padding-top: 0;
+    padding-bottom: 2px;
+  }
+}
+
+.navbar-nav>li>a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: normal;
+}
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 5px 15px;
+}
+
+.navbar-brand {
+  /* float: left; */
+  /* height: 50px; */
+  padding: 0 0 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #f3f1f0;
+  font-size: 1.2em;
+}
+/* ---------------------- Navbar Toggle--------------- */
+
+.navbar-toggle {
+  background-color: #045449;
+  color: #777;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+.nav .btn {
+  padding: 0;
+}
+
+/* -----------------Carousel ----------------------- */
+
+.carousel-caption {
+  text-shadow: none;
+  margin-left: 60px;
+}
+
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel {
+  margin-top: -30px;
+}
+
+.carousel .carousel-caption {
+  top: 100%;
+  transform: translateY(-90%);
+  bottom: initial;
+}
+
+.carousel-caption p {
+  font-size: 0.7em;
+}
+.carousel-caption h5 {
+  color: #504d4d;
+}
+.carousel-control.right,
+.carousel-control.left {
+  background-image: none;
+  background-color: transparent;
+}
+.carousel-inner > .item > a > img, .carousel-inner > .item > img, .img-responsive, .thumbnail a > img, .thumbnail > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: 70px;
+  margin-top: 30px;
+}
+
+.carousel-indicators li {
+  background-color: #999;
+  background-color: rgba(70,70,70,.25);
+}
+
+.carousel-indicators .active {
+  background-color: #444;
+}
+
+.carousel-indicators {
+  bottom: -15px;
+}
+
+.glyphicon-chevron-right:before {
+  content: "\e080";
+  color: #504d4d;
+}
+.glyphicon-chevron-left:before {
+  content: "\e079";
+  color: #504d4d;
+}
+/* --------------------- Footer ------------------ */
+.navbar-fixed-bottom {
+  background-color: #9b9393;
+  height: 70px;
+  padding-top: 20px;
+}
+.navbar-fixed-bottom p {
+  color: #f3f1f0;
+  font-size: 0.8em;
+}
+
+/* -------------------- Form ----------------------*/
+.form-group {
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+
+.container-fluid .show {
+  max-width: 100vh; }
+
+h1,
+h2,
+h3 {
+  margin-bottom: 20px; }
+
+/*
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    padding-top: 26px;
+}
+*/
+.index p,
+a {
+  margin-top: 20px; }
+
+.thumbnail {
+  margin-bottom: 20px;
+  padding: 0;
+  height: 500px; }
+
+.item.list-group-item {
+  float: none;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 10px; }
+
+.item.list-group-item:nth-of-type(odd):hover, .item.list-group-item:hover {
+  background: #428bca; }
+
+.item.list-group-item .list-group-image {
+  margin-right: 10px; }
+
+p.img {
+  height: 160px; }
+
+.item.list-group-item .thumbnail .img {
+  height: 160px; }
+
+.item.list-group-item .thumbnail {
+  margin-bottom: 0px; }
+
+.item.list-group-item .caption {
+  padding: 9px 9px 0px 9px; }
+
+.item.list-group-item:nth-of-type(odd) {
+  background: #eeeeee; }
+
+.item.list-group-item:before, .item.list-group-item:after {
+  display: table;
+  content: " "; }
+
+.item.list-group-item p {
+  float: left; }
+
+.item.list-group-item:after {
+  clear: both; }
+
+.list-group-item-text {
+  margin: 0 0 11px; }
+
+.index #products {
+  margin-top: 50px; }
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
