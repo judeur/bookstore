@@ -1,10 +1,8 @@
 class OrdersController < ApplicationController
+  protect_from_forgery with: :null_session
   # before_action :logged_in_user
-<<<<<<< HEAD
   before_filter :authenticate_user!
-=======
->>>>>>> master
-	
+
 	def index
 	end
 	
