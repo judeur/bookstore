@@ -1,6 +1,9 @@
 class OrdersController < ApplicationController
   # before_action :logged_in_user
+<<<<<<< HEAD
   before_filter :authenticate_user!
+=======
+>>>>>>> master
 	
 	def index
 	end
