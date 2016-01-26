@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Your Favorite Bookstore</title>
-  
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-   
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300|Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
-  
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"> </script>
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  <%= csrf_meta_tags %>
-  
-  
-</head>
+  <head>
+    <title>Your Favorite Bookstore</title>
 
-<body>
-	<%= render :partial => 'shared/nav' %>
-	
-	<div class="container main">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-    <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
-    <% end %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
-		<%= yield %>
-    <%= debug(params) if Rails.env.development? %>
-	</div> <!-- container -->
-<!-- 	<footer class="footer"> -->
-		<%= render :partial => 'shared/footer' %>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300|Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
 
-<!-- 	</footer> -->
-</body>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"> </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+
+
+  </head>
+
+  <body>
+    <%= render :partial => 'shared/nav' %>
+
+    <div class="container main">
+
+      <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+
+      <%= yield %>
+      <%= debug(params) if Rails.env.development? %>
+    </div> <!-- container -->
+
+      <%= render :partial => 'shared/footer' %>
+  </body>
 </html>
 
 

@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
+  devise_for :users, :skip => [:sessions]
+  as :user do
+    get 'signin' => 'devise/sessions#new', :as => :new_user_session
+    post 'signin' => 'devise/sessions#create', :as => :user_session
+    delete 'signout' => 'devise/sessions#destroy', :as => :destroy_user_session
+  end
+
   resources :users
-  get 'users/new'
 
   root 'static_pages#landing_page'
   get 'about' =>'static_pages#about'
@@ -21,10 +27,6 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:index, :show, :create, :destroy]
 
-  resources :users
-
-
-  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

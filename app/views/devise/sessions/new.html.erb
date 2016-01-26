@@ -1,0 +1,39 @@
+<div class="row" id="deviseForm">
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name),
+             html: { class: "form" }) do |f| %>
+  <div class="header col-xs-12">
+    <h2 class="title">Log in</h2>
+  </div> <!-- header -->
+
+  <div class="content controls col-xs-12">
+    <div class="field form-group col-xs-12 p0 pt12 m0">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, class: "form-control" %>
+    </div> <!-- field -->
+
+    <div class="field form-group col-xs-12 p0 m0">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+    </div> <!-- field -->
+
+   <% if devise_mapping.rememberable? -%>
+    <div class="field form-group  col-xs-offset-6 p0">
+        <%= f.check_box :remember_me, {class: "check" } %>
+        <%= f.label :remember_me, { class: "checkbox inline" } %>
+    </div><!-- field -->
+  <% end %>
+  </div> <!--  content -->
+
+  <div class="subfooter col-xs-12 pt12">
+    <div class="group">
+      <div class="actions">
+        <%= f.submit "Log in", class: "btn btn-info col-xs-5 fr" %>
+      </div><!-- actions -->
+    </div><!-- group -->
+  </div><!-- subfooter -->
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+</div> <!-- row -->
