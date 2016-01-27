@@ -6,16 +6,17 @@ Rails.application.routes.draw do
     delete 'signout' => 'devise/sessions#destroy', :as => :destroy_user_session
   end
 
-  resources :users
+ resources :users
 
   root 'static_pages#landing_page'
   get 'about' =>'static_pages#about'
   get 'contact' => 'static_pages#contact'
-  get 'signup' => 'users#new'
 
   post 'static_pages/thank_you'
 
   get 'products/index'
+
+  get 'users/index'
 
   get 'tasks/show'
 
