@@ -14,9 +14,17 @@
     </div> <!-- navbar-header -->
 
     <div  class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-left">
+        <li class="<%= 'active' if current_page?(new_user_session_path) %>">
+          <% if user_signed_in? %>
+              <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
+          <% else %>
+              <%= link_to("Login", new_user_session_path) %>
+          <% end %>
+        </li>
+      </ul>
+
       <ul class="nav navbar-nav navbar-right">
-
-
         <li class="<%= 'active' if current_page?(products_path) %>">
           <%= link_to "Books", products_path %> </li>
         <li class="<%= 'active' if current_page?(orders_path) %>">
@@ -30,18 +38,8 @@
               <%= text_field_tag(:q) %>
               <%= submit_tag("Search", html: { class: "btn btn-default" })%>
         </li>
+        <% end %>
       </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li class="<%= 'active' if current_page?(new_user_session_path) %>">
-          <% if user_signed_in? %>
-              <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
-          <% else %>
-              <%= link_to("Login", new_user_session_path) %>
-          <% end %>
-        </li>
-      </ul>
-      <% end %>
 
     </div> <!-- #navbar -->
   </div> <!-- container -->

@@ -68,11 +68,14 @@ div {
 .highlight {
   padding: 9px 14px;
   margin-bottom: 14px;
+  margin-top: 25px;
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
   border-radius: 4px;
-  max-height: 200px;
+  font-size: 0.9em;
 }
+
+.highlight
 
 .highlight pre {
   padding: 0;
@@ -435,6 +438,14 @@ p.img {
   display: inline-block;
   margin-top: 50px;
 }
+
+/* --------------- reviews ---------------*/
+
+.review {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
 /* -------------- errors etc. ---------------- */
 
 #error_explanation {
