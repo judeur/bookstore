@@ -9,7 +9,18 @@
   </div> <!-- header -->
 
   <div class="content controls col-xs-12">
+
     <div class="field form-group col-xs-12 p0 pt12 m0">
+      <%= f.label :first_name %><br />
+      <%= f.text_field :first_name, autofocus: true, class: "form-control" %>
+    </div> <!-- field -->
+
+    <div class="field form-group col-xs-12 p0 m0">
+      <%= f.label :last_name %><br />
+      <%= f.text_field :last_name, autofocus: true, class: "form-control" %>
+    </div> <!-- field -->
+
+    <div class="field form-group col-xs-12 p0 m0">
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true, class: "form-control" %>
     </div> <!-- field -->

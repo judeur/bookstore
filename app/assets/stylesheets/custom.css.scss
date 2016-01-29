@@ -123,7 +123,7 @@ pre {
   padding: 5px 0px;
   letter-spacing: 2px;
   margin: 25px 20px 10px 20px;
-  color: #FFF;
+  color: #f3f1f0;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
@@ -131,7 +131,7 @@ pre {
 }
 
 .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
-  color: #fff;
+  color: #f3f1f0;
   font-weight: 900;
 }
 
@@ -140,17 +140,11 @@ pre {
   padding: 12px 15px;
 }
 
-/*
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-  border-color: transparent;
+.navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 1px;
+  padding-right: 5px;
 }
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: rgb(57, 171, 111);
-}
-.navbar-default .navbar-toggle {
-  border-color: rgb(57, 171, 111);
-}
-
 /* --------------navbar-toggle --------------------*/
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
@@ -237,6 +231,7 @@ pre {
   color: #504d4d;
 }
 /* --------------------- Footer ------------------ */
+/*
 .navbar-fixed-bottom {
   background-color: #9b9393;
   height: 70px;
@@ -245,7 +240,47 @@ pre {
 .navbar-fixed-bottom p {
   color: #f3f1f0;
   font-size: 0.8em;
+}*/
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #9b9393;
+  margin: 0 auto;
 }
+
+.footer .copy {
+  color: #f3f1f0;
+  font-size: 0.8em;
+  display: inline-block;
+  float: left;
+  padding: 25px 30px;
+}
+
+.footer .no-list {
+  display: inline-block;
+  padding: 25px 15px;
+}
+
+.footer .no-list a {
+  margin-right: 15px;
+  color: #f3f1f0;
+}
+
+.footer .navbar>li>a:hover {
+  color: rgba(241, 131, 61, 1);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+ .footer .navbar-text {
+   margin: 28px;
+   color: #f3f1f0;
+   font-size: 0.8em;
+ }
 
 /* -------------------- Forms ----------------------*/
 .form-group {
@@ -329,9 +364,12 @@ p.img {
 #deviseForm .form {
   background-color: rgba(0,0,0,0.6);
   padding-bottom: 20px;
-  min-height: 350px;
+  min-height: 480px;
 }
 
+#deviseForm .login {
+  min-height: 370px;
+}
 #deviseForm .title {
   margin-bottom: 20px;
   text-align: center;
@@ -420,7 +458,7 @@ p.img {
 }
 
 #deviseForm.longer-form {
-  max-height: 670px;
+  max-height: 690px;
   background-color: rgba(0,0,0,0.6);
   padding-bottom: 20px;
 }
