@@ -8,12 +8,13 @@
           <li class="<%= 'active' if current_page?(new_user_session_path) %> no-list">
             <%= link_to("Edit profile", edit_user_registration_path) %>
             <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
-
+          </li>
         <% else %>
+          <li class="no-list">
             <%= link_to("Sign up", new_user_registration_path) %>
             <%= link_to("Login", new_user_session_path) %>
-        <% end %>
-      </li>
+          </li>
+      <% end %>
     </ul>
   </div>
 </footer>
