@@ -2,8 +2,6 @@
 <h2> Our books </h2>
 <%= link_to 'Add a new book', new_product_path %>
 
-	
-	
 	<div id="products" class="row list-group">
 		<% @products.each do |product| %>
 			<%= render :partial => 'shared/product', locals: {product: product} %>

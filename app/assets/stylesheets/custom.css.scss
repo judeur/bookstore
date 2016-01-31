@@ -39,7 +39,7 @@ p {color: #777;
   margin-right: auto;
   margin-left: auto;
   margin-top: 200px;
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 }
 
 pre {
@@ -147,6 +147,44 @@ pre {
   border-width: 0 0 1px;
   padding-right: 5px;
 }
+/*-------------- navbar fixed bottom ------------*/
+
+.navbar-fixed-bottom {
+  height: 120px;
+  background-color: #9b9393;
+  margin: 0 auto;
+}
+
+.navbar-fixed-bottom .copy {
+  color: #f3f1f0;
+  font-size: 0.8em;
+  display: inline-block;
+  float: left;
+  padding: 25px 30px;
+}
+
+.navbar-fixed-bottom .no-list {
+  display: inline-block;
+  padding: 25px 15px;
+}
+
+.navbar-fixed-bottom.no-list a {
+  margin-right: 15px;
+  color: #f3f1f0;
+}
+
+.navbar-fixed-bottom .navbar>li>a:hover {
+  color: rgba(241, 131, 61, 1);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.navbar-fixed-bottom .navbar-text {
+  margin: 28px;
+  color: #f3f1f0;
+  font-size: 0.8em;
+}
+
 /* --------------navbar-toggle --------------------*/
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
@@ -233,18 +271,9 @@ pre {
   color: #504d4d;
 }
 /* --------------------- Footer ------------------ */
-/*
-.navbar-fixed-bottom {
-  background-color: #9b9393;
-  height: 70px;
-  padding-top: 20px;
-}
-.navbar-fixed-bottom p {
-  color: #f3f1f0;
-  font-size: 0.8em;
-}*/
 
-.footer {
+
+footer {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -254,35 +283,47 @@ pre {
   margin: 0 auto;
 }
 
-.footer .copy {
+footer .copy {
   color: #f3f1f0;
   font-size: 0.8em;
   display: inline-block;
   float: left;
-  padding: 25px 30px;
+  padding: 30px 25px 0 30px;
 }
 
-.footer .no-list {
-  display: inline-block;
+footer .user a {
+  color: #f3f1f0;
+  font-weight: 0.8em;
+}
+
+footer .user {
+  padding-top: 25px;
+}
+footer li {
+  display: inline;
   padding: 25px 15px;
+  margin: 28px;
+  color: #f3f1f0;
+  font-size: 0.8em;
 }
 
-.footer .no-list a {
+footer .no-list {
   margin-right: 15px;
   color: #f3f1f0;
 }
 
-.footer .navbar>li>a:hover {
+footer .user >li>a:hover {
   color: rgba(241, 131, 61, 1);
   background-color: transparent;
   text-decoration: none;
 }
 
- .footer .navbar-text {
+ footer ul .text {
    margin: 28px;
    color: #f3f1f0;
    font-size: 0.8em;
  }
+
 
 /* -------------------- Forms ----------------------*/
 .form-group {
@@ -311,7 +352,8 @@ a {
 .thumbnail {
   margin-bottom: 20px;
   padding: 0;
-  height: 500px; }
+  height: 500px;
+  background-color: #f5f5f5;}
 
 .item.list-group-item {
   float: none;
@@ -326,7 +368,8 @@ a {
   margin-right: 10px; }
 
 p.img {
-  height: 160px; }
+  height: 160px;
+  margin-left: 22px;}
 
 .item.list-group-item .thumbnail .img {
   height: 160px; }
