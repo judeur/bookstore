@@ -9,26 +9,28 @@
       <div class="col-md-9 col-lg-8 col-xs-6">
         <div class="row">
           <ul>
-          <% if user_signed_in? %>
-          <div class="col-md-8">
-            <p class="text hidden-xs hidden-sm">Logged in as <%= current_user.email %> </p>
-          </div>
-          <div class="col-md-4 pull-right user">
-            <li class="<%= 'active' if current_page?(new_user_session_path) %> no-list" >
-              <%= link_to("Edit profile", edit_user_registration_path) %> |
-              <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
-            </li>
-          <% else %>
-          <div class="col-md-4 pull-right user">
-            <li>
-              <%= link_to("Sign up", new_user_registration_path) %> |
-             <%= link_to("Login", new_user_session_path) %>
-            </li>
-           <% end %>
+            <% if user_signed_in? %>
+            <div class="col-md-8">
+              <p class="text hidden-xs hidden-sm">Logged in as <%= current_user.email %> </p>
+            </div> <!-- col-md-8 -->
+
+            <div class="col-md-4 pull-right user">
+              <li class="<%= 'active' if current_page?(new_user_session_path) %> no-list" >
+                <%= link_to("Edit profile", edit_user_registration_path) %> |
+                <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
+              </li>
+            </div><!-- col-md-4 -->
+            <% else %>
+            <div class="col-md-4 pull-right user">
+              <li>
+                <%= link_to("Sign up", new_user_registration_path) %> |
+               <%= link_to("Login", new_user_session_path) %>
+              </li>
+             <% end %>
+            </div> <!-- col-md-4 -->
           </ul>
-        </div>
-      </div> <!-- subrow -->
-    </div><! -- col -->
-   </div> <!-- row -->
-  </div><!-- container -->
+        </div><!-- subrow -->
+      </div> <!-- col-md-9 -->
+    </div><!-- row -->
+   </div> <!-- container-->
 </footer>

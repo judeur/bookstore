@@ -4,6 +4,9 @@
         <figure class="highlight">
           <!-- <pre> -->
           <h4>Leave us a review:</h4>
+          <% flash.each do |message_type, message| %>
+              <div class="alert alert-<%= message_type %>"><%= message %></div>
+          <% end %>
           <%= form_for([@product, @product.comments.build]) do |f| %>
               <p>
                 <%= f.label :body, "Comments" %> <br>
@@ -19,5 +22,5 @@
           <!-- </pre> -->
         </figure>
       </div> <!-- col-md-6 -->
-    </div> <!-- row
+    </div> <!-- row -->
 <% end %>
