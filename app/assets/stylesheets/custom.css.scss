@@ -110,31 +110,44 @@ pre {
 }
 /* ---------------------- Main Navigation --------------- */
 .navbar-default {
-  background-color: rgba(155, 147, 147, 0.7);
+  background-color: rgba(155, 147, 147, 0.8);
   border-color: transparent;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   background-color: transparent;
-  border-bottom: 1px solid rgba(237, 114, 37, 1.0);
+  border-bottom: 2px solid rgba(237, 114, 37, 1.0);
 }
 
 .navbar-default .navbar-nav > li > a {
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 800;
   padding: 5px 0px;
   letter-spacing: 2px;
   margin: 25px 20px 10px 20px;
   color: #fcfaf9;
+  font-variant: small-caps;
+}
+
+.navbar-default .nav li form input{
+  font-size: 0.8em;
+  color: dimgray;
+  font-variant: small-caps;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
   color: rgba(241, 131, 61, 1);
 }
 
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #fcfaf9;
+}
+
 .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
   color: #fcfaf9;
   font-weight: 900;
+  font-variant: small-caps;
+  font-size: 1.4em;
 }
 
 .navbar-brand {

@@ -27,7 +27,7 @@
         <li style="padding-top: 22px;">
           <%= form_tag("/products", method: "get", html: { class: "navbar-form navbar-right" }) do %>
               <%= text_field_tag(:q) %>
-              <%= submit_tag("Search", html: { class: "btn btn-default" })%>
+              <%= submit_tag("Search", html: { class: "btn btn-default search" })%>
         </li>
         <% end %>
       </ul>
