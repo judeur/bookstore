@@ -13,7 +13,8 @@ Rails.application.routes.draw do
 
   get 'products/index'
 
-  get 'users/index'
+  get 'users' => 'users#index'
+  get 'users/show'
 
   get 'tasks/show'
 
@@ -24,7 +25,7 @@ Rails.application.routes.draw do
   resources :products do
     resources :comments
   end
-  resources :users
+ resources :users
   resources :orders, only: [:index, :show, :create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
