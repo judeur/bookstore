@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root 'static_pages#landing_page'
   get 'about' =>'static_pages#about'
   get 'contact' => 'static_pages#contact'
+  get 'static_pages/index'
 
   post 'static_pages/thank_you'
 
