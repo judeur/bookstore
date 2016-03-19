@@ -23,7 +23,11 @@ describe UsersController, :type => :controller do
       end
     end
 
-    context "user cannot access show page other user" do
+    context "user cannot access show page of other user" do
+      it "gets response of 403" do
+        get :show, id: @useralso.id
+        expect(response).to have_http_status(403)
+      end
 
     end
 

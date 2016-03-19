@@ -7,7 +7,10 @@ class ApplicationController < ActionController::Base
 
   rescue_from CanCan::AccessDenied do |exception|
     flash.now[:error] = "Access denied"
-    redirect_to root_url
+    render :file => "#{Rails.root}/public/403.html", :status => 403, :layout => false
+    #return 403.html
+    #redirect_to main_app.root_url, :alert => exception.message
+    #redirect_to root_url
   end
 
  protected
