@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     post 'signin' => 'devise/sessions#create', :as => :user_session
     delete 'signout' => 'devise/sessions#destroy', :as => :destroy_user_session
   end
+
   root 'static_pages#landing_page'
   get 'about' =>'static_pages#about'
   get 'contact' => 'static_pages#contact'
@@ -23,11 +24,15 @@ Rails.application.routes.draw do
 
   get 'tasks/edit'
 
+  post 'payments/create'
+
   resources :products do
     resources :comments
   end
+
  resources :users
-  resources :orders, only: [:index, :show, :create, :destroy]
+
+ resources :orders, only: [:index, :show, :create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
