@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    logger.debug { "Book count: #{Product.count}" }
     if params[:q]
       search_term = params[:q]
       @products = Product.where("name ILIKE ?", "%#{ search_term}%")
