@@ -17,12 +17,12 @@
 		<% @products.each do |product| %>
 		
 		<div class="item<%= " active" if product == @products.first %>">
-			<%= image_tag(product.image_url) %>
+			<%= image_tag(product.image_url, width: 120) %>
 			<div class="carousel-caption hidden-xs">
-				<h3><%= product.name %></h3>
-				<h5><%= product.author %> </h5>
-				<p> <%= product.description %> </p>
-			</div> <!-- carousel-caption -->
+        <h3><%= product.name %></h3>
+         <h5><%= product.author %> </h5> 
+        <p> <%= product.description %> </p>
+      </div> <!-- carousel-caption -->
 			
 		</div> <!-- item -->
 		
