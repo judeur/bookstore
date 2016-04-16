@@ -3,16 +3,12 @@
 <%= link_to 'Add a new book', new_product_path %>
 
 <% cache (cache_key_for_products) do %>
-
-	<div id="products" class="row list-group">
-		<% @products.each do |product| %>
-			<%= render :partial => 'shared/product', locals: {product: product} %>
-		<% end %>
-
+<div id="products" class="row list-group">
+  <% @products.each do |product| %>
+    <%= render :partial => 'shared/product', locals: {product: product} %>
+  <% end %>
+</div> <!-- #products .row -->
 <% end %>
-
-	</div> <!-- #products .row -->
-	
 </div> <!-- container -->
 	
 <br>

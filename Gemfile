@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
-ruby "2.2.4"
+ruby '2.2.4'
 
 gem 'rails', '4.2.6'
 
 group :development, :test do
 	gem 'sqlite3'
   gem 'rspec-rails', '~> 3.0'
-  gem "factory_girl_rails", "~> 4.0"
+  gem 'factory_girl_rails', '~> 4.0'
   gem 'guard'
   gem 'guard-rspec', require: false
   gem 'spork-rails'
@@ -14,8 +14,8 @@ group :development, :test do
   gem 'byebug'
 end
 
-gem "carrierwave"
-gem "mini_magick", '~> 3.5.0'
+gem 'carrierwave'
+gem 'mini_magick', '~> 3.5.0'
 gem 'fog'
 gem 'figaro'
 gem 'cancancan'
@@ -33,6 +33,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'spring'
 gem 'stripe'
 gem 'angularjs-rails'
+gem 'dalli'
+gem 'redis-rails'
 
 group :production do
 	gem 'rails_12factor', '0.0.2'

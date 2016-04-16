@@ -2,6 +2,8 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   respond_to :json, :html
 
+  #$redis.set('page-visit', 0)
+
   # GET /products
   # GET /products.json
   def index
@@ -12,15 +14,12 @@ class ProductsController < ApplicationController
     else
       @products = Product.all
     end
-
     respond_with @products
   end
 
-  # GET /products/1
-  # GET /products/1.json
   def show
+    @counter = $redis.incr "#{Date.today.year}:#{Date.today.month}:#{Date.today.day}:products:#{@product.id}:views"
     @comments = @product.comments.order("created_at DESC").paginate(page: params[:page], per_page: (4))
-    # @comments = @product.comments.order("created_at DESC").page: params[:page], per_page: (4)
   end
 
   # GET /products/new
@@ -53,6 +52,7 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
+        expire_fragment(@product)
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @product }
       else

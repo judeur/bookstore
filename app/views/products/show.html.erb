@@ -1,4 +1,4 @@
-
+<% cache @product do %>
 <div class="row">
   <div class="col-md-offset-2 col-md-3 cols-xs-6 col-sm-6">
     <%= image_tag @product.image_url, id: "zoom_07", width: "350", class: "img-responsive img-zoom", data_zoom_image: @product.image_url %>
@@ -9,6 +9,9 @@
     <hr>
   </div><!-- col -->
 
+  <div class="col-md-6 col-md-offset-1 col-xs-6 col-sm-6">
+    <p> This article has been visited <%= @counter %> times. </p>
+  </div> <!-- col -->
   <div class="col-md-6 col-md-offset-1 col-xs-6 col-sm-6">
     <div class="row">
       <div class="col-xs-6 col-sm-3 col-md-3">
@@ -30,7 +33,7 @@
         <strong>Average rating:  </strong>
         <p class="rated" data-score="<%= @product.average_rating %>"></p>
       </div><!-- col-xs-6 col-sm-4" -->
-</div>
+    </div>
     <div class="row">
      <!-- <div class="col-xs-6 col-sm-3 col-md-3 col-md-offset-1 col-lg-3 col-sm-offset-1 col-lg-offset-0"> < -->
         <%= form_tag("/payments/create") do %>
@@ -40,8 +43,7 @@
       </div> <!-- col -->
     </div><!--nested row -->
   </div><!-- col-md-6 -->
-
-
+<% end %>
 <%= render :partial => 'new_comment' %>
 <%= render :partial => 'comments' %>
 
