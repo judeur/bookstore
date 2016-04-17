@@ -2,8 +2,6 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   respond_to :json, :html
 
-  #$redis.set('page-visit', 0)
-
   # GET /products
   # GET /products.json
   def index

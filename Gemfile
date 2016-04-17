@@ -35,6 +35,7 @@ gem 'stripe'
 gem 'angularjs-rails'
 gem 'dalli'
 gem 'redis-rails'
+gem 'newrelic_rpm'
 
 group :production do
 	gem 'rails_12factor', '0.0.2'
