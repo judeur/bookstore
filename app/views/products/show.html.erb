@@ -11,6 +11,7 @@
   <div class="col-md-6 col-md-offset-1 col-xs-6 col-sm-6">
     <p> This article has been visited <%= @counter %> times. </p>
   </div> <!-- col -->
+
   <div class="col-md-6 col-md-offset-1 col-xs-6 col-sm-6">
     <div class="row">
       <div class="col-xs-6 col-sm-3 col-md-3">
@@ -32,16 +33,16 @@
         <strong>Average rating:  </strong>
         <p class="rated" data-score="<%= @product.average_rating %>"></p>
       </div><!-- col-xs-6 col-sm-4" -->
-    </div>
+    </div> <!-- row -->
     <div class="row">
      <!-- <div class="col-xs-6 col-sm-3 col-md-3 col-md-offset-1 col-lg-3 col-sm-offset-1 col-lg-offset-0"> < -->
-        <%= form_tag("/payments/create") do %>
-            <%= render partial: "shared/stripe_checkout_button" %>
-            <%= hidden_field_tag(:product_id, @product.id) %>
-        <% end %>
-      </div> <!-- col -->
-    </div><!--nested row -->
+      <%= form_tag("/payments/create") do %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+          <%= hidden_field_tag(:product_id, @product.id) %>
+      <% end %>
+    </div> <!-- row -->
   </div><!-- col-md-6 -->
+</div><!-- row -->
 
 <%= render :partial => 'new_comment' %>
 <%= render :partial => 'comments' %>

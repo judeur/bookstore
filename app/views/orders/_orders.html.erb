@@ -1,31 +1,30 @@
 <% cache @order do %>
     <table class="table table-hover">
       <thead>
-      <tr>
-        <th>Order ID</th>
-        <th> Total</th>
-        <th>Product</th>
-        <th></th>
-      </tr>
+        <tr>
+          <th>Order ID</th>
+          <th> Total</th>
+          <th>Product</th>
+          <th></th>
+        </tr>
       </thead>
       <tbody>
-      <tr ng-repeat="order in orders | orderBy:'-id':reverse">
-        <td>
-          {{order.id}}
-        </td>
-        <td>
-          <strong>{{order.total | currency}} </strong>
-        </td>
-        <td>
-          {{order.product.name}}
-          <small ng-show="order.user.email"><br>{{order.user.email}}</small>
-        </td>
-        <td>
-          <button ng-click="deleteOrder(order)" class="btn btn-danger btn-sm">
-            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-        </td>
-
-      </tr>
+        <tr ng-repeat="order in orders | orderBy:'-id':reverse">
+          <td>
+            {{order.id}}
+          </td>
+          <td>
+            <strong>{{order.total  | currency}} </strong>
+          </td>
+          <td>
+            {{order.product.name}}
+            <small ng-show="order.user.email"><br>{{order.user.email}}</small>
+          </td>
+          <td>
+            <button ng-click="deleteOrder(order)" class="btn btn-danger btn-sm">
+              <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+          </td>
+        </tr>
       </tbody>
     </table>
 <% end %>

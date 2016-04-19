@@ -10,11 +10,9 @@
         <span class="icon-bar"></span>
       </button>
       <%= link_to "Your favorite bookstore", root_path, class: "navbar-brand" %>
-
     </div> <!-- navbar-header -->
 
     <div  class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
       <ul class="nav navbar-nav navbar-right">
         <li class="<%= 'active' if current_page?(products_path) %>">
           <%= link_to "Books", products_path %> </li>
@@ -34,4 +32,4 @@
 
     </div> <!-- #navbar -->
   </div> <!-- container -->
-	</nav> <!-- navbar -->
+</nav> <!-- navbar -->

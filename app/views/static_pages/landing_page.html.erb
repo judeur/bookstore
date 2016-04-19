@@ -6,16 +6,11 @@
 		<% @products.each do |product| %>
 		<li data-target="#carousel-example-generic" data-slide-top="0" class="<%= " active" if product == @products.first %>"></li>
 		<% end %>
-<!--
-		<li data-target="#carousel-example-generic" data-slide-top="1"></li>
-		<li data-target="#carousel-example-generic" data-slide-top="2"></li>
--->
 	</ol>
 	
 	<!-- Wrapper for slides -->
 	<div class="carousel-inner" role="listbox">
 		<% @products.each do |product| %>
-		
 		<div class="item<%= " active" if product == @products.first %>">
 			<%= image_tag(product.image_url, width: 120) %>
 			<div class="carousel-caption hidden-xs">
@@ -23,9 +18,7 @@
          <h5><%= product.author %> </h5> 
         <p> <%= product.description %> </p>
       </div> <!-- carousel-caption -->
-			
 		</div> <!-- item -->
-		
 		<% end %>
 	</div> <!-- carousel-inner -->
 	

@@ -20,17 +20,15 @@
 	</p>
 
   <h3>Or you can fill out this form:</h3>
-
   <%= flash[:notice] %>
-
     <%= form_tag("/static_pages/thank_you", :html => { :class => "form-horizontal" }) do %>
       <div class="form-group">
         <div class="field">
-            <%= label_tag :name, "Name", class: "col-sm-2 control-label" %>
-        <div class="col-sm-10">
-              <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter name" %> <br>
-        </div> <!-- col -->
-          </div> <!-- field -->
+          <%= label_tag :name, "Name", class: "col-sm-2 control-label" %>
+          <div class="col-sm-10">
+            <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter name" %> <br>
+          </div> <!-- col -->
+        </div> <!-- field -->
       </div><!-- form-group -->
 
       <div class="form-group">
@@ -38,7 +36,7 @@
           <%= label_tag :email, "Email", class: "col-sm-2 control-label" %>
           <div class="col-sm-10">
             <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter email" %> <br>
-            </div><!-- col -->
+          </div><!-- col -->
         </div> <!-- field -->
       </div><!-- form-group -->
 
@@ -50,12 +48,11 @@
           </div> <!-- col -->
         </div> <!-- field -->
       </div><!-- form-group -->
+
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
         <%= submit_tag "Send", class: "btn btn-default" %>
       </div>
-  <% end %>
+      <% end %>
   </div> <!-- form-group -->
-    </div> <!-- col -->
-
 </div><!-- contact -->
